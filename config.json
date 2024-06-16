@@ -1,0 +1,17 @@
+{
+   "coffeelist":[
+      {
+         "name":"Latte",
+         "price":3
+      },
+      {
+         "name":"Cappuccino",
+         "price":2.5
+      },
+      {
+         "name":"Flat White",
+         "price":2.25
+      }
+
+   ]
+}
