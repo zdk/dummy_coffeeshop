@@ -1,0 +1,4 @@
+{"level":"info","ts":1718789594.4782221,"caller":"app/main.go:43","msg":"Starting the app on port 8085"}
+{"level":"info","ts":1718789790.6262167,"caller":"app/main.go:43","msg":"Starting the app on port 8085"}
+{"level":"info","ts":1718789796.423279,"caller":"app/main.go:43","msg":"Starting the app on port 8085"}
+{"level":"info","ts":1718789806.8875895,"caller":"app/main.go:36","msg":"Hey ping pong"}
