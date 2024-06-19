@@ -2,3 +2,6 @@
 {"level":"info","ts":1718789790.6262167,"caller":"app/main.go:43","msg":"Starting the app on port 8085"}
 {"level":"info","ts":1718789796.423279,"caller":"app/main.go:43","msg":"Starting the app on port 8085"}
 {"level":"info","ts":1718789806.8875895,"caller":"app/main.go:36","msg":"Hey ping pong"}
+{"level":"info","ts":1718791645.5736861,"caller":"dummy_coffeeshop/main.go:50","msg":"Starting the app on port 8089"}
+{"level":"info","ts":1718792212.4900239,"caller":"dummy_coffeeshop/main.go:53","msg":"Starting the app on port 8089"}
+{"level":"info","ts":1718792260.7716758,"caller":"dummy_coffeeshop/main.go:53","msg":"Starting the app on port 8089"}

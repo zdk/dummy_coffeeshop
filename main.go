@@ -12,7 +12,10 @@ import (
 	"go.uber.org/zap"
 )
 
-var Logger *zap.Logger
+var (
+	Logger *zap.Logger
+	sugar  *zap.SugaredLogger
+)
 
 func init() {
 	path := "logs/logs.txt"
@@ -33,7 +36,7 @@ func getEnv(key, defaultValue string) string {
 }
 
 func main() {
-	sugar := Logger.Sugar()
+	sugar = Logger.Sugar()
 	portNumber := getEnv("APP_PORT", "8085")
 
 	r := gin.Default()
@@ -69,6 +72,7 @@ func createFile(path string) {
 
 func NewLogger(path string) (*zap.Logger, error) {
 	cfg := zap.NewProductionConfig()
+
 	cfg.OutputPaths = []string{
 		path,
 	}
@@ -77,7 +81,14 @@ func NewLogger(path string) (*zap.Logger, error) {
 }
 
 func coffeeList(c *gin.Context) {
-	coffee, _ := coffee.GetCoffees()
+	coffee, err := coffee.GetCoffees()
+	if err != nil {
+		sugar.Errorf("Error while getting the coffee list %s", err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"message": "Error!",
+		})
+		return
+	}
 
 	// Call the HTML method of the Context to render a template
 	c.HTML(
